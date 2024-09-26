@@ -33,9 +33,9 @@ public class PessoaController {
     public ResponseEntity<Pessoa> getPessoaById(@PathVariable Long id) {
         Optional<Pessoa> optionalPessoa = pessoaRepository.findById(id);
         if (optionalPessoa.isPresent()) {
-            return ResponseEntity.ok(optionalPessoa.get());
+                return ResponseEntity.ok(optionalPessoa.get());
         } else {
-            return ResponseEntity.notFound().build();
+                return ResponseEntity.notFound().build();
         }
     }
 
