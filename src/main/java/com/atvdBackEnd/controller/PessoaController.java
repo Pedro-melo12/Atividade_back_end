@@ -20,7 +20,7 @@ public class PessoaController {
 
     @PostMapping("/pessoas")
     public ResponseEntity<Pessoa> createPessoa(@RequestBody PessoaDto pessoaDto) {
-            Pessoa pessoa = new Pessoa();
+        Pessoa pessoa = new Pessoa();
 
         BeanUtils.copyProperties(pessoaDto, pessoa);
 
